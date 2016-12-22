@@ -1,25 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title> Langton's Ant</title>
     <meta charset="UTF-8">
     <title>LangtonAnt</title>
     <script src="libraries/p5.js" type="text/javascript"></script>
-
+    <link rel="stylesheet" href="libraries/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="libraries/p5.dom.js" type="text/javascript"></script>
 
     <script src="sketch.js" type="text/javascript"></script>
-
-    <style> body {
-  margin: 0;
-  display: flex;
-
-  /* This centers our sketch horizontally. */
-  justify-content: center;
-
-  /* This centers our sketch vertically. */
-  align-items: center;
-} </style>
-  </head>
+  <style>
+    #foot{
+      text-align: center;
+      color: white;
+      font-family:Impact, Charcoal, sans-serif;
+    }
+  </style>
   <body>
+    <br>
+    <div class = "row">
+        <div class = "col-sm-12">
+        <h1 align="center" 
+        style="color:white; font-size: 50px;font-family:Impact, Charcoal, sans-serif;">
+            LANGTON'S ANT SIMULATION</h1>
+        </div>
+    </div>
+    <br>
+    <div class = "row">
+        <div id = "counter" class="col-sm-3">
+          <h1 
+              style = "color:white; text-align:center;"></h1>
+        </div>
+        <div class="col-sm-6" id="sketch-holder" align = "center">
+        </div>
+        <div class="col-sm-3">
+        </div>
+    </div>
+    <br>  
+    <br>  
+    <div class = "row">
+        <div class = "col-sm-12">
+            <footer id = 'foot'>
+                <p>Author : Mehul Ahuja</p>
+            </footer>
+        </div>
+    </div>  
   </body>
+  
 </html>

@@ -4,19 +4,20 @@
 
 // Global variables
 var COLS, ROWS;
-var CELL_SIZE = 5;
-var WIN_WIDTH = 400;
-var WIN_HEIGHT = 400;
+var CELL_SIZE = 6;
+var WIN_WIDTH = 600;
+var WIN_HEIGHT = 600;
 var GRID = [];
 
 // a new ant is born 
-var ant = new Ant(32, 40);
+var ant = new Ant(50, 50);
 
 // Store the current direction of ant 
 var cur_dir = 'UP';
 
 function setup() {
-  createCanvas(WIN_WIDTH, WIN_HEIGHT)  
+  var canvas = createCanvas(WIN_WIDTH, WIN_HEIGHT);
+  canvas.parent('sketch-holder');
   COLS = floor(width/CELL_SIZE);
   ROWS = floor(height/CELL_SIZE);
   // make it a 2d array 
@@ -33,7 +34,7 @@ function setup() {
 }
 
 function draw() {
-  background(51)
+  background('#F48B94')
   var moved = false;
   for(var i = 0; i < ROWS; i++){
     for(var j = 0; j < COLS; j++){
@@ -134,11 +135,11 @@ function Cell(i, j){
   this.show = function(){
     var x = this.j * CELL_SIZE;
     var y = this.i * CELL_SIZE;
-    stroke(255);
+    stroke('#ACDBC9');
     if(this.clr === 0){
       noFill();
     }else{
-      fill(255, 204, 0);
+      fill('#000000');
     }
     rect(x, y, CELL_SIZE, CELL_SIZE)
   };
